@@ -37,11 +37,11 @@ func center_screen():
 	if camera != null:
 		var pos
 		pos = hero.get_pos()
-		var cam_pos = Vector2(global.half_screen_size.x - pos.x - global.HALF_STEP_X, global.half_screen_size.y - pos.y - global.HALF_STEP_Y)
+		var cam_pos = Vector2(global.half_screen_size.x - pos.x, global.half_screen_size.y - pos.y)
 		camera.set_pos(cam_pos)
 
 func after_walk(name):
-	pass
+	print(name)
 
 func set_current_scene(scene):
 	self.scene = scene
