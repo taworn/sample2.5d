@@ -12,7 +12,7 @@ font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 
-font/size = 48
+font/size = 32
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 2 )
@@ -32,16 +32,16 @@ margin/top = 0.0
 margin/right = 1024.0
 margin/bottom = 768.0
 
-[node name="title" type="Label" parent="container"]
+[node name="the_end" type="Label" parent="container"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 0.0
+margin/top = 150.0
 margin/right = 1024.0
-margin/bottom = 400.0
+margin/bottom = 550.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0.752941, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0.501961, 0, 1 )
@@ -49,7 +49,7 @@ custom_constants/shadow_offset_x = 3
 custom_constants/line_spacing = 3
 custom_constants/shadow_offset_y = 3
 custom_constants/shadow_as_outline = 3
-text = "Sample 2.5D"
+text = "The End"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -63,13 +63,13 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 555.0
+margin/top = 704.0
 margin/right = 1024.0
-margin/bottom = 619.0
+margin/bottom = 768.0
 custom_fonts/font = SubResource( 2 )
-text = "Press START Button"
-align = 1
-valign = 1
+text = "Oo+ T."
+align = 2
+valign = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

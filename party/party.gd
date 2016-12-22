@@ -41,7 +41,14 @@ func center_screen():
 		camera.set_pos(cam_pos)
 
 func after_walk(name):
-	print(name)
+	if scene.warp_dict.has(name):
+		var warp = scene.warp_dict[name]
+		var pos = global.map_to_pixel(Vector2(warp.x, warp.y))
+		state.persist.x = pos.x
+		state.persist.y = pos.y
+		state.persist.map = warp.map
+		state.persist.face = warp.face
+		get_tree().change_scene("res://" + warp.map + ".tscn")
 
 func set_current_scene(scene):
 	self.scene = scene
