@@ -5,5 +5,5 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
-		get_tree().change_scene("res://map.tscn")
+		get_tree().change_scene("res://" + state.persist.map + ".tscn")
 

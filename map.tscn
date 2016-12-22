@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://tilesets/basic.tres" type="TileSet" id=1]
+[ext_resource path="res://party/hero.tscn" type="PackedScene" id=2]
+[ext_resource path="res://party/party.tscn" type="PackedScene" id=3]
+[ext_resource path="res://FreeMonoBold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 32
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 4 )
 
 [node name="root" type="Node"]
 
@@ -22,6 +32,40 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -327674, 0, -327673, 0, -327672, 0, -327671, 0, -327670, 0, -327669, 0, -262142, 0, -262141, 0, -262140, 0, -262139, 0, -262138, 0, -262137, 0, -262136, 0, -262135, 0, -262134, 0, -262133, 0, -196607, 0, -196606, 0, -196605, 0, -196604, 0, -196603, 0, -196602, 0, -196601, 0, -196600, 0, -196599, 0, -196598, 0, -196597, 0, -131072, 0, -131071, 0, -131070, 0, -131069, 0, -131068, 0, -131067, 4, -131066, 4, -131065, 4, -131064, 3, -131063, 0, -131062, 0, -131061, 0, -131060, 0, -65536, 0, -65535, 0, -65534, 0, -65533, 0, -65532, 0, -65531, 4, -65530, 4, -65529, 4, -65528, 6, -65527, 0, -65526, 0, -65525, 2, -65524, 0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 3, 6, 3, 7, 5, 8, 0, 9, 0, 10, 0, 11, 2, 12, 0, 65538, 0, 65539, 0, 65540, 2, 65541, 3, 65542, 2, 65543, 0, 65544, 0, 65545, 0, 65546, 0, 65547, 2, 65548, 0, 131075, 0, 131076, 0, 131077, 3, 131078, 0, 131079, 0, 131080, 0, 131081, 0, 131082, 0, 131083, 0, 131084, 0, 196613, 3, 196614, 3, 196615, 3, 196616, 0, 196617, 0, 196618, 0, 196619, 0, 262149, 3, 262150, 3, 262151, 3 )
+tile_data = IntArray(  )
+
+[node name="players" type="Node2D" parent="camera/tile_map"]
+
+[node name="hero" parent="camera/tile_map/players" instance=ExtResource( 2 )]
+
+[node name="scripts" type="Control" parent="camera/tile_map"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="party" parent="camera/tile_map" instance=ExtResource( 3 )]
+
+[node name="scene_name" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 736.0
+margin/right = 1024.0
+margin/bottom = 768.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 
